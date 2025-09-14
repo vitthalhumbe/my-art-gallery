@@ -84,3 +84,190 @@ body, html {
         font-size: 1rem;
     }
 }
+
+/* --- Gallery Page Styles --- */
+
+/* Basic body style for scrollable pages */
+body {
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.page-header {
+    padding: 20px 50px;
+    background-color: #111;
+    text-align: center;
+}
+
+.page-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+.page-header nav a:hover, .page-header nav a.active {
+    color: #00bcd4; /* A nice highlight color */
+}
+
+.gallery-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.gallery-page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+/* Filter Buttons */
+#filter-buttons {
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    color: #111;
+}
+
+/* Gallery Grid (Masonry effect) */
+.gallery-grid {
+    column-count: 3; /* Number of columns */
+    column-gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    margin-bottom: 15px;
+    break-inside: avoid; /* Prevents items from breaking across columns */
+    overflow: hidden; /* For the zoom effect */
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: scale(1.05); /* Subtle zoom */
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    padding: 30px 15px 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .gallery-grid { column-count: 2; }
+}
+@media (max-width: 576px) {
+    .gallery-grid { column-count: 1; }
+}
+
+/* --- Lightbox Styles --- */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    background-color: #1a1a1a;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#lightbox-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+#lightbox-details {
+    padding: 20px 0 0;
+    text-align: left;
+}
+
+#lightbox-details h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+#lightbox-details p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+#lightbox-details strong {
+    color: #fff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #bbb;
+}

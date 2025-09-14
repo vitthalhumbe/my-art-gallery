@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Mr. Drawer 34</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="page-header">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <h1>My Work</h1>
+
+        <div id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="watercolor">Water colors</button>
+            <button class="filter-btn" data-filter="lineart">Lineart</button>
+            <button class="filter-btn" data-filter="penart">Penart</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="lineart" 
+                 data-title="Zenitsu" 
+                 data-medium="Graphite on Paper" 
+                 data-year="August 2025" 
+                 data-description="When Zenitsu locked in to kill the Kaigaku, his expression is calm and focused.">
+                <img src="assets/images/image-1.jpg" alt="Silent Gaze">
+                <div class="overlay"><span>Zenitsu</span></div>
+            </div>
+            <div class="gallery-item" data-category="watercolor"
+                 data-title="Monkey D. Luffy" 
+                 data-medium="watercolors" 
+                 data-year="May 2025" 
+                 data-description="My favorite character from One Piece.">
+                <img src="assets/images/image-2.jpg" alt="Monkey D. Luffy">
+                <div class="overlay"><span>Monkey D. Luffy</span></div>
+            </div>
+            <div class="gallery-item" data-category="penart"
+                 data-title="Denji" 
+                 data-medium="Black Ink" 
+                 data-year="June 2025" 
+                 data-description="The guy with a chainsaw for a head, and with dream that he wants to touch the B***s.">
+                <img src="assets/images/image-3.jpg" alt="Denji from Chainsaw man">
+                <div class="overlay"><span>Denji</span></div>
+            </div>
+            </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Artwork" id="lightbox-img">
+            <div id="lightbox-details">
+                <h2 id="lightbox-title"></h2>
+                <p><strong id="lightbox-medium"></strong> (<span id="lightbox-year"></span>)</p>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
