@@ -271,3 +271,76 @@ body {
 .close-btn:hover {
     color: #bbb;
 }
+
+
+/* --- About Me Page Styles --- */
+
+.about-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between the photo and the text */
+    align-items: flex-start;
+}
+
+/* Column 1: Photo */
+.about-photo {
+    flex: 1; /* Takes up 1 part of the available space */
+    min-width: 300px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Column 2: Text */
+.about-text {
+    flex: 2; /* Takes up 2 parts, making it wider than the photo */
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.about-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #00bcd4; /* Use the highlight color */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack columns on top of each other */
+    }
+    .about-text {
+        text-align: center; /* Center text when stacked */
+    }
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+}
