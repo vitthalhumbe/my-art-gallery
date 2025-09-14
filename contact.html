@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Mr. Drawer 34</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <h1>Get in Touch</h1>
+        <div class="contact-grid">
+            <div class="contact-form-container">
+                <form id="contact-form" action="https://formspree.io/f/mandzwro" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-container">
+                <h3>Contact Information</h3>
+                <p>
+                    Whether you have a question or a drawing request, I'm happy to draw. Reach out via the form or through my email and social channels.
+                </p>
+                <p><strong><i class="fas fa-envelope"></i> Email:</strong> vitthal.3454@gmail.com</p>
+                
+                <div class="social-media-links">
+                    <a href="https://www.instagram.com/mr.drawer34" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+           
+                    <a href="https://github.com/vitthalhumbe/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

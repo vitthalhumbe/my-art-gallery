@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // IMPORTANT: Replace these with the paths to your own images
     const images = [
-        'assets/images/image-1.jpg',
-        'assets/images/image-2.jpg',
-        'assets/images/image-3.jpg'
+        'assets/images/image-1.jpg'
     ];
 
     let currentImageIndex = 0;
